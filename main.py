@@ -1,9 +1,8 @@
 import flask, flask.views
-
 app = flask.Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def hello_world():
     return "hello_world"
 
