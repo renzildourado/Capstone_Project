@@ -10,7 +10,7 @@ def hello_world():
 
 @app.route("/predict", methods = ["GET", "POST"])
 def get_permissions():
-    permission_list = request.args
+    permission_list = request.args.get('name')
     return permission_list
 
 
