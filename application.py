@@ -11,7 +11,7 @@ def hello_world():
 @app.route("/predict", methods = ["GET", "POST"])
 def get_permissions():
     permission_list = request.args
-    return "hey"
+    return permission_list
 
 
 if __name__ == '__main__':
