@@ -1,1 +1,1 @@
-web: gunicorn malappdetector:app
+web: gunicorn application:app
