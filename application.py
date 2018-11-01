@@ -12,6 +12,7 @@ def hello_world():
 def get_permissions():
 
     received_json_object = request.get_json()
+    print("*", received_json_object)
     return str(received_json_object)
 
 
