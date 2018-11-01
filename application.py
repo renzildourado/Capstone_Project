@@ -11,10 +11,8 @@ def hello_world():
 @app.route("/predict", methods = ["GET", "POST"])
 def get_permissions():
 
-    print("1234")
     received_json_object = request.get_json()
-    print("*", received_json_object)
-    return received_json_object
+    return str(received_json_object)
 
 
 if __name__ == '__main__':
