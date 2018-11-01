@@ -14,7 +14,8 @@ def get_permissions():
     received_json_object = request.get_json()
 
     permission_list = received_json_object["permissionList"]
-    print("PERMISSION LIST")
+    permission_list = permission_list[1:len(permission_list)-1]
+    permission_list = permission_list.split(",")
     permission_list_string = "The Permissions are:\n"
 
     for permission in permission_list:
