@@ -1,4 +1,5 @@
 import flask, flask.views
+import ast
 from flask import request
 app = flask.Flask(__name__)
 
@@ -18,7 +19,7 @@ def get_permissions():
     permission_list_string = permission_list_string[1:len(permission_list_string)-1]
 
     #Turning the string into an actual python list
-    permission_list = process_permissions(permission_list_string)
+    permission_list = ast.literal_eval(permission_list_string)
 
     permission_list_string_return = "The Permissions are:\n"
 
@@ -27,16 +28,6 @@ def get_permissions():
         permission_list_string_return += "\n"
 
     return permission_list_string_return
-
-def process_permissions(permission_string):
-    permission_list_string = permission_string.split(",")
-    permission_list = []
-
-    for word in permission_list_string:
-        permission_list.append(word[1:len(word)-1])     #stripping "" from "ABC"
-
-    return permission_list
-
 
 
 if __name__ == '__main__':
