@@ -10,8 +10,8 @@ def hello_world():
 
 @app.route("/predict", methods = ["GET", "POST"])
 def get_permissions():
-    permission_list = request.form['name']
-    return permission_list
+    received_json_object = request.get_json()
+    return received_json_object
 
 
 if __name__ == '__main__':
