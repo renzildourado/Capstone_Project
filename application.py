@@ -12,7 +12,7 @@ def hello_world():
     return "The Server works"
 
 
-@app.route("/predict", methods = ["GET"])
+@app.route("/predict", methods = ["POST"])
 def get_permissions():
 
     received_json_object = request.get_json()
