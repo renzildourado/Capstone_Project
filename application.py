@@ -54,7 +54,7 @@ def perform_predict(permission_list):
         else:
             predict_list.append(0)
 
-    linear_regression = pickle.load(open("random_forest_model_new.sav", 'rb'))
+    linear_regression = pickle.load(open("logistic_regression_model_new.sav", 'rb'))
     prediction = linear_regression.predict([predict_list])
 
     if prediction[0]==0:
